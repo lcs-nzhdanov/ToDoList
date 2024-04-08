@@ -26,8 +26,13 @@ struct LandingView: View {
                     ItemView(currentItem: third_item)
                 }
                     .searchable(text: $searchText)
+                
                 HStack {
+                    TextField("Enter an item to do", text: $newItemDescription)
                     
+                    Button("Add") {
+                        //Add an item
+                    }
                 }
                     .padding(20)
             }
