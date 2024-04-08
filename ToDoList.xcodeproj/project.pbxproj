@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82323FE82BC46A5100F6E8CC /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82323FE72BC46A5100F6E8CC /* TodoItem.swift */; };
 		82C729D82BC034F400215CA4 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C729D72BC034F400215CA4 /* ToDoListApp.swift */; };
 		82C729DA2BC034F400215CA4 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C729D92BC034F400215CA4 /* LandingView.swift */; };
 		82C729DC2BC034F700215CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C729DB2BC034F700215CA4 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82323FE72BC46A5100F6E8CC /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		82C729D42BC034F400215CA4 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C729D72BC034F400215CA4 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		82C729D92BC034F400215CA4 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82323FE62BC46A1F00F6E8CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				82323FE72BC46A5100F6E8CC /* TodoItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		82C729CB2BC034F400215CA4 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +63,7 @@
 		82C729D62BC034F400215CA4 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				82323FE62BC46A1F00F6E8CC /* Models */,
 				82C729D72BC034F400215CA4 /* ToDoListApp.swift */,
 				82C729D92BC034F400215CA4 /* LandingView.swift */,
 				82C729DB2BC034F700215CA4 /* Assets.xcassets */,
@@ -142,6 +153,7 @@
 			files = (
 				82C729DA2BC034F400215CA4 /* LandingView.swift in Sources */,
 				82C729E62BC03A4A00215CA4 /* ItemView.swift in Sources */,
+				82323FE82BC46A5100F6E8CC /* TodoItem.swift in Sources */,
 				82C729D82BC034F400215CA4 /* ToDoListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
