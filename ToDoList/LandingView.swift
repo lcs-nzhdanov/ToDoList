@@ -23,7 +23,7 @@ struct LandingView: View {
                 List {
                     ExtractedView(title: "Hello", done: true)
                     
-                    ExtractedView(title: "Hello2", done: true)
+                    ExtractedView(title: "Hello Not Done", done: false)
                     
                     ExtractedView(title: "Hello3", done: true)
                 }
@@ -51,11 +51,7 @@ struct ExtractedView: View {
         Label(
             title: {Text(title)},
             icon: {
-                if done {
-                    Image(systemName: "checkmark.circle")
-                } else {
-                    Image(systemName: "circle")
-                }
+                Image(systemName: done ? "checkmark.circle": "circle")
             }
         )
     }
