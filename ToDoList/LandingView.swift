@@ -21,7 +21,11 @@ struct LandingView: View {
         NavigationView {
             VStack {
                 List {
+                    ExtractedView(title: "Hello", done: true)
                     
+                    ExtractedView(title: "Hello2", done: true)
+                    
+                    ExtractedView(title: "Hello3", done: true)
                 }
                     .searchable(text: $searchText)
                 HStack {
@@ -37,4 +41,22 @@ struct LandingView: View {
 
 #Preview {
     LandingView()
+}
+
+struct ExtractedView: View {
+    let title: String
+    let done: Bool
+    
+    var body: some View {
+        Label(
+            title: {Text(title)},
+            icon: {
+                if done {
+                    Image(systemName: "checkmark.circle")
+                } else {
+                    Image(systemName: "circle")
+                }
+            }
+        )
+    }
 }
