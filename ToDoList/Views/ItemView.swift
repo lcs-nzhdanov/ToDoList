@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct ItemView: View {
-    let currentItem: TodoItem
+    @Binding var currentItem: TodoItem
     
     var body: some View {
         Label(
             title: {Text(currentItem.title)},
             icon: {
                 Image(systemName: currentItem.done ? "checkmark.circle": "circle")
+                // Tap to mark as done
+                    .onTapGesture {
+                        currentItem.done.toggle()
+                    }
             }
         )
     }
 }
 
 #Preview {
-    ItemView(currentItem: first_item)
+    ItemView(currentItem: Binding.constant(first_item))
 }
