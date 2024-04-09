@@ -12,7 +12,9 @@ struct ItemView: View {
     
     var body: some View {
         Label(
-            title: {Text(currentItem.title)},
+            title: {
+                TextField("Enter a to-do item", text: $currentItem.title, axis: .vertical)
+            },
             icon: {
                 Image(systemName: currentItem.done ? "checkmark.circle": "circle")
                 // Tap to mark as done
