@@ -34,13 +34,24 @@ struct LandingView: View {
                     TextField("Enter an item to do", text: $newItemDescription)
                     
                     Button("Add") {
-                        //Add an item
+                        createToDo(withTitle: newItemDescription)
                     }
+                    .disabled(newItemDescription.isEmpty)
                 }
                     .padding(20)
             }
             .navigationTitle("To do")
         }
+    }
+    
+    //MARK: Functions
+    func createToDo(withTitle title: String) {
+        
+        // Create the new to-do item instance
+        let todo = TodoItem(title: title, done: false)
+        
+        // Append to the arrray
+        todos.append(todo)
     }
 }
 
