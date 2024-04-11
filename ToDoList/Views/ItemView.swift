@@ -26,6 +26,6 @@ struct ItemView: View {
     }
 }
 
-#Preview {
-    ItemView(currentItem: Binding.constant(first_item))
-}
+//#Preview {
+//    ItemView(currentItem: Binding.constant(first_item))
+//}
