@@ -50,6 +50,9 @@ struct LandingView: View {
                     .padding(20)
             }
             .navigationTitle("To do")
+            .onAppear {
+                printCommandToOpenDatabaseFile()
+            }
         }
     }
     
@@ -61,7 +64,10 @@ struct LandingView: View {
         
         // Append to the arrray
         modelContext.insert(todo)
+        
+        todo.title = "Enter an item to do"
     }
+    
     
     func removeRows(at offsets: IndexSet) {
         
@@ -77,8 +83,8 @@ struct LandingView: View {
 }
 
 
-//#Preview {
-//    LandingView()
-//}
+#Preview {
+    LandingView()
+}
 
 
