@@ -44,6 +44,9 @@ struct LandingView: View {
                     
                     Button("Add") {
                         createToDo(withTitle: newItemDescription)
+                        
+                        
+                        newItemDescription = ""
                     }
                     .disabled(newItemDescription.isEmpty)
                 }
@@ -64,8 +67,7 @@ struct LandingView: View {
         
         // Append to the arrray
         modelContext.insert(todo)
-        
-        todo.title = "Enter an item to do"
+
     }
     
     
@@ -83,8 +85,8 @@ struct LandingView: View {
 }
 
 
-#Preview {
-    LandingView()
-}
+//#Preview {
+//    LandingView()
+//}
 
 
