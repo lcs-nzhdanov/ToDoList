@@ -85,8 +85,10 @@ struct LandingView: View {
 }
 
 
-//#Preview {
-//    LandingView()
-//}
+#Preview {
+    LandingView()
+        .modelContainer(TodoItem.preview)
+    // The .modelContainer view modifier inserts the in-memory container held within TodoItem.preview. This in-memory container holds our mock data, and it is inserted into the environment. The container is then used by the Xcode Preview window to show us what LandingView looks like.
+}
 
 
